@@ -13,6 +13,7 @@ class Bank
   end
 
   def withdrawl(amount)
+    raise "You cannot withdraw more than your total balance" if (@balance - amount) < 0
     @balance -= amount
     @transaction_history << {withdrawl: amount}
   end

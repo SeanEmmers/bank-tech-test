@@ -16,6 +16,11 @@ describe Bank do
       subject.withdrawl(30)
       expect(subject.bank_balance).to eq 20
     end
+
+    it 'does not let you withdraw below zero' do
+      subject.deposit(10)
+      expect {subject.withdrawl(20)}.to raise_error "You cannot withdraw more than your total balance" 
+    end
   end
 
   describe '.statement' do
