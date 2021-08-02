@@ -9,4 +9,12 @@ describe Bank do
       expect(subject.bank_balance).to eq 50
     end
   end
+
+  describe '.withdrawl' do
+    it 'withdrawls the correct amount from the bank balance' do
+      subject.deposit(50)
+      subject.withdrawl(30)
+      expect(subject.bank_balance).to eq 20
+    end
+  end
 end

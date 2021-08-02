@@ -10,6 +10,10 @@ class Bank
     @balance += amount
   end
 
+  def withdrawl(amount)
+    @balance -= amount
+  end
+
   def bank_balance
     balance
   end
