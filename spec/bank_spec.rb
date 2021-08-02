@@ -17,4 +17,12 @@ describe Bank do
       expect(subject.bank_balance).to eq 20
     end
   end
+
+  describe '.statement' do
+    it 'returns a history of transactions in a readable manor' do
+      subject.deposit(50)
+      subject.withdrawl(30)
+      expect(subject.statement).to eq [ {deposit: 50}, {withdrawl: 30} ]
+    end
+  end
 end
