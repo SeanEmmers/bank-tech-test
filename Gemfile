@@ -10,6 +10,4 @@ gem 'rspec'
 
 gem 'rubocop'
 
-gem 'capybara'
-
 gem 'simplecov'

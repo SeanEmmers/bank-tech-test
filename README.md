@@ -8,6 +8,8 @@ I spent an hour or so planning how I wanted to build my bank interface. I decide
 
 My tests are not great, I ran out of time while trying to refactor my tests to include doubles, especially for the ATM spec as the class is rather complex and has alot of dependencies.
 
+I would also like to write a feature test using Capybara
+
 ## How To Run
 
 Clone the repo <br />
