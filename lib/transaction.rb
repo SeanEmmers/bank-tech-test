@@ -10,11 +10,11 @@ class Transaction
   end
 
   def credit?
-    @action == :withdrawl
+    @action == :withdrawl ? @amount : ""
   end
 
   def debit?
-    action == :deposit
+    action == :deposit ? @amount : ""
   end
 
 end
