@@ -4,8 +4,6 @@ require_relative 'balance'
 
 class ATM
 
-  attr_accessor :transaction_history
-
   def initialize(transaction_history = TransactionHistory.new, statement = Statement.new, balance = Balance.new)
     @transaction_history = transaction_history
     @statement = statement
@@ -23,8 +21,8 @@ class ATM
     @transaction_history.add_transaction(sum, :withdrawl, balance.display_balance)
   end
 
-  def print_statement(transaction_history)
-    statement.print_statement(transaction_history)
+  def print_statement
+    statement.print_statement(transaction_history.transactions)
   end
 
   def balance
@@ -33,6 +31,6 @@ class ATM
 
   private 
 
-  attr_accessor :balance, :statement
+  attr_accessor :balance, :statement, :transaction_history
 
 end

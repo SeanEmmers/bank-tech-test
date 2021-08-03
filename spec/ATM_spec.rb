@@ -2,7 +2,7 @@
 
 require 'ATM'
 
-describe Bank do
+describe ATM do
 
   context 'Money has already been deposited' do
 
@@ -37,12 +37,16 @@ describe Bank do
       end
     end
 
-    describe '.statement' do
+    describe '.print_statement' do
       it 'returns a history of transactions in a readable manor' do
         subject.withdrawl(30)
         time = Time.now.strftime("%d/%m/%Y")
         expect(subject.statement).to eq [ {time => {deposit: 50} }, {time => {withdrawl: 30} } ]
       end
     end
+
+    describe '.balance' do
+    end
+    
   end
 end
