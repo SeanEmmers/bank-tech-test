@@ -9,13 +9,13 @@ class Bank
 
   def deposit(amount)
     @balance += amount
-    @transaction_history << { Time.now.strftime("%d/%m/%Y") => {deposit: amount}}
+    @transaction_history << { Time.now.strftime("%d/%m/%Y") => {deposit: amount} }
   end
 
   def withdrawl(amount)
     raise "You cannot withdraw more than your total balance" if (@balance - amount) < 0
     @balance -= amount
-    @transaction_history << { Time.now.strftime("%d/%m/%Y") => {withdrawl: amount}}
+    @transaction_history << { Time.now.strftime("%d/%m/%Y") => {withdrawl: amount} }
   end
 
   def statement
