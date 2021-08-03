@@ -7,15 +7,15 @@ class Bank
     @transaction_history = []
   end
 
-  def deposit(amount)
-    @balance += amount
-    @transaction_history << { date: Time.now.strftime("%d/%m/%Y"), action: :deposit, amount: amount, balance: @balance }
+  def deposit(sum)
+    @balance += sum
+    @transaction_history << { date: Time.now.strftime("%d/%m/%Y"), action: :deposit, amount: sum, balance: balance }
   end
 
-  def withdrawl(amount)
-    raise "You cannot withdraw more than your total balance" if (@balance - amount) < 0
-    @balance -= amount
-    @transaction_history << { date: Time.now.strftime("%d/%m/%Y"), action: :withdrawl, amount: amount, balance: @balance}
+  def withdrawl(sum)
+    raise "You cannot withdraw more than your total balance" if (@balance - sum) < 0
+    @balance -= sum
+    @transaction_history << { date: Time.now.strftime("%d/%m/%Y"), action: :withdrawl, amount: sum, balance: balance }
   end
 
   def statement
