@@ -10,7 +10,6 @@ class Actions
     @statement = statement
   end
 
-
   def deposit(sum)
     @transaction_history.increase_balance(sum)
     @transaction_history.add_transaction(sum, :deposit)
@@ -21,7 +20,6 @@ class Actions
     @transaction_history.reduce_balance(sum)
     @transaction_history.add_transaction(sum, :withdrawl)
   end
-
 
   def print_statement(transaction_history)
     statement.print_statement(transaction_history)

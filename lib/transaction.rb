@@ -9,6 +9,12 @@ class Transaction
     @balance = balance
   end
 
-  
+  def credit?
+    @action == :withdrawl
+  end
+
+  def debit?
+    action == :deposit
+  end
 
 end
