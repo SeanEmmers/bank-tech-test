@@ -3,8 +3,8 @@
 require 'ATM'
 
 describe ATM do
-  context 'Money has already been deposited' do
-    before(:each) { subject.deposit(50) }
+  
+  let(:sum) { 50 }
 
     describe '.deposit' do
       it 'adds the amount deposited to the total bank balance' do
@@ -45,5 +45,4 @@ describe ATM do
 
     describe '.balance' do
     end
-  end
 end
