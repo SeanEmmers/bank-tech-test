@@ -12,8 +12,8 @@ describe ATM do
     end
   end
 
-  describe '.withdrawl' do
-    it 'withdrawls the correct amount from the bank balance' do
+  describe '.withdraw' do
+    it 'withdraws the correct amount from the bank balance' do
     end
 
     it 'does not let you withdraw below zero' do
