@@ -27,6 +27,10 @@ class ATM
     statement.print_statement(transaction_history)
   end
 
+  def balance
+    balance.display_balance
+  end
+
   private 
 
   attr_accessor :balance, :statement
