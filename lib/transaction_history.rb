@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# transaction history class
 require_relative 'transaction'
 
 class TransactionHistory

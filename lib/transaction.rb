@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# transaction class
 class Transaction
   attr_reader :time, :amount, :action, :balance
 

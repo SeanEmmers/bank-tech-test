@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# balance class
 class Balance
   def initialize
     @balance = 0

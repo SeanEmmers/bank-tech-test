@@ -3,7 +3,7 @@
 require_relative 'transaction_history'
 require_relative 'statement'
 require_relative 'balance'
-
+# ATM class
 class ATM
   def initialize(transaction_history = TransactionHistory.new, statement = Statement.new, balance = Balance.new)
     @transaction_history = transaction_history
@@ -27,7 +27,7 @@ class ATM
     statement.print_statement(transaction_history.transactions)
   end
 
-  def balance
+  def show_balance
     balance.display_balance
   end
 

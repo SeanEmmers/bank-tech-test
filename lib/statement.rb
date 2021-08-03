@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# statement class
 class Statement
   def print_statement(transaction_history)
     puts "date || credit || debit || balance \n"
