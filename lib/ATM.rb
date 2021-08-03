@@ -13,14 +13,14 @@ class ATM
 
   def deposit(sum)
     balance.increase_balance(sum)
-    @transaction_history.add_transaction(sum, :deposit, balance.display_balance)
+    @transaction_history.add_transaction(sum, :deposit, balance.balance)
   end
 
   def withdrawl(sum)
-    raise 'You cannot withdraw more than your total balance' if (balance.display_balance - sum).negative?
+    raise 'You cannot withdraw more than your total balance' if (balance.balance - sum).negative?
 
     balance.reduce_balance(sum)
-    @transaction_history.add_transaction(sum, :withdrawl, balance.display_balance)
+    @transaction_history.add_transaction(sum, :withdrawl, balance.balance)
   end
 
   def print_statement
@@ -28,7 +28,7 @@ class ATM
   end
 
   def show_balance
-    balance.display_balance
+    balance.balance
   end
 
   private

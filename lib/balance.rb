@@ -3,22 +3,22 @@
 # balance class
 class Balance
   def initialize
-    @balance = 0
+    @bank_balance = 0
   end
 
-  def display_balance
-    balance
+  def balance
+    bank_balance
   end
 
   def increase_balance(sum)
-    @balance += sum
+    @bank_balance += sum
   end
 
   def reduce_balance(sum)
-    @balance -= sum
+    @bank_balance -= sum
   end
 
   private
 
-  attr_accessor :balance
+  attr_accessor :bank_balance
 end

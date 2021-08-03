@@ -10,21 +10,21 @@ describe Balance do
 
   describe '.display_balance' do
     it 'displays the balace' do
-      expect(subject.display_balance).to eq sum
+      expect(subject.balance).to eq sum
     end
   end
 
   describe '.increase_balance' do
     it 'increases the balance' do
       subject.increase_balance(sum)
-      expect(subject.display_balance).to eq 100
+      expect(subject.balance).to eq 100
     end
   end
 
   describe '.reduce_balance' do
     it 'decreases the balance' do
       subject.reduce_balance(sum)
-      expect(subject.display_balance).to eq 0
+      expect(subject.balance).to eq 0
     end
   end
 end
