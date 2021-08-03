@@ -24,17 +24,16 @@ describe Transaction do
       expect(transaction.debit?).to eq sum
     end
     it 'returns an empty string if false' do
-      expect(withdrawl_transaction.debit?).to eq ""
+      expect(withdrawl_transaction.debit?).to eq ''
     end
   end
 
   describe '.credit?' do
     it 'returns the action if true' do
-      expect(transaction.credit?).to eq ""
+      expect(transaction.credit?).to eq ''
     end
     it 'returns an empty string if false' do
       expect(withdrawl_transaction.credit?).to eq sum
     end
   end
-
 end

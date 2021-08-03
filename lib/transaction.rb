@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Transaction
-  
   attr_reader :time, :amount, :action, :balance
 
   def initialize(sum, action, balance)
