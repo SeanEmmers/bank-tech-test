@@ -24,12 +24,17 @@ describe ATM do
     end
 
     it 'does not let you withdraw below zero' do
+      expect { atm.withdraw(600) }.to raise_exception 'You cannot withdraw more than your total balance'
     end
   end
 
   describe '.print_statement' do
+    
   end
 
-  describe '.balance' do
+  describe '.show_balance' do
+    it 'shows bank balance' do
+      expect(atm.show_balance).to eq 500
+    end
   end
 end
