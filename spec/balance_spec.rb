@@ -3,11 +3,10 @@
 require 'balance'
 
 describe Balance do
-
-  let(:sum) {50}
-  before(:each) { 
+  let(:sum) { 50 }
+  before(:each) do
     subject.increase_balance(sum)
-  }
+  end
 
   describe '.display_balance' do
     it 'displays the balace' do

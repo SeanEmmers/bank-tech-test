@@ -13,7 +13,7 @@ class Bank
   end
 
   def withdrawl(sum)
-    raise 'You cannot withdraw more than your total balance' if (@balance - sum) < 0
+    raise 'You cannot withdraw more than your total balance' if (@balance - sum).negative?
 
     @balance -= sum
     @transaction_history << { date: Time.now.strftime('%d/%m/%Y'), action: :withdrawl, amount: sum, balance: balance }
