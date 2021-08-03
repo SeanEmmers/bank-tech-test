@@ -20,7 +20,7 @@ Run irb <br />
 require './lib/ATM'
 atm = ATM.new
 atm.deposit()
-atm.withdrawl()
+atm.withdraw()
 atm.print_statement
 
 ```
