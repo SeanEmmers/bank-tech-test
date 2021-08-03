@@ -1,7 +1,6 @@
 require 'balance'
 
 describe Balance do
-
   describe '.display_balance' do
   end
 
@@ -10,5 +9,4 @@ describe Balance do
 
   describe '.reduce_balance' do
   end
-
 end

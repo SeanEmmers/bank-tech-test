@@ -3,7 +3,6 @@ require_relative 'statement'
 require_relative 'balance'
 
 class ATM
-
   def initialize(transaction_history = TransactionHistory.new, statement = Statement.new, balance = Balance.new)
     @transaction_history = transaction_history
     @statement = statement
@@ -16,7 +15,8 @@ class ATM
   end
 
   def withdrawl(sum)
-    raise "You cannot withdraw more than your total balance" if (balance.display_balance - sum) < 0
+    raise 'You cannot withdraw more than your total balance' if (balance.display_balance - sum) < 0
+
     balance.reduce_balance(sum)
     @transaction_history.add_transaction(sum, :withdrawl, balance.display_balance)
   end
@@ -29,8 +29,7 @@ class ATM
     balance.display_balance
   end
 
-  private 
+  private
 
   attr_accessor :balance, :statement, :transaction_history
-
 end

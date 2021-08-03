@@ -1,5 +1,4 @@
 class Balance
-
   def initialize
     @balance = 0
   end
@@ -19,5 +18,4 @@ class Balance
   private
 
   attr_accessor :balance
-
 end

@@ -1,7 +1,6 @@
 require_relative 'transaction'
 
 class TransactionHistory
-
   def initialize(transaction = Transaction)
     @transactions = []
     @transaction = transaction
@@ -12,5 +11,4 @@ class TransactionHistory
   end
 
   attr_accessor :transactions, :transaction
-
 end
