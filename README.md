@@ -10,9 +10,9 @@ My tests are not great, I ran out of time while trying to refactor my tests to i
 
 ## How To Run
 
-Clone the repo
-Run Bundle Install
-Open irb
+Clone the repo <br />
+Run Bundle Install <br />
+Open irb <br />
 
 ```
 require './lib/ATM'
