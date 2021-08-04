@@ -12,10 +12,10 @@ class Transaction
   end
 
   def credit?
-    @action == :credit ? @amount : ''
+    @action == :credit ? @amount : '   '
   end
 
   def debit?
-    action == :deposit ? @amount : ''
+    action == :deposit ? @amount : '   '
   end
 end
