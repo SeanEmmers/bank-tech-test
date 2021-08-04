@@ -9,10 +9,17 @@ describe Statement do
     end
   end
 
-  # describe '.print_statement' do
-  #   let(:test_array) { [:item_one, :item_two, :item_three] }
-  #   it 'displays the statement correctly' do
-  #     expect(subject.print_statement(:test_array)).to eq
-  #   end
-  # end
+  describe '.print_statement' do
+    it 'displays the statement correctly' do
+      transactions = double(:transactions)
+      transaction_1 = double({ time: '03/08/2021', action: 'credit', amount: 30.00, balance: 30.00 })
+      transaction_2 = double({ time: '03/08/2021', action: 'debit', amount: 20.00, balance: 10.00 })
+      allow(transactions).to receive(:each).and_return([transaction_1, transaction_2])
+      expect(subject.print_statement(transactions)).to eq (
+       "date || credit || debit || balance
+        03/08/2021 || || 20.00 || 10.00
+        03/08/2021 || 30.00 || || 30.00"
+      ) 
+    end
+  end
 end

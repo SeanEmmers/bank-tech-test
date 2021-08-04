@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/seanphillips/Projects/week-ten/bank/spec/Atm_spec.rb": {
+      "/Users/seanphillips/Projects/week-ten/bank/spec/atm_spec.rb": {
         "lines": [
           null,
           null,
@@ -34,7 +34,6 @@
           null,
           null,
           1,
-          null,
           null,
           null,
           1,
@@ -94,7 +93,6 @@
           1,
           null,
           1,
-          null,
           1,
           5,
           5,
@@ -105,7 +103,6 @@
           null,
           null,
           1,
-          null,
           null
         ]
       },
@@ -140,17 +137,14 @@
           null,
           null,
           1,
+          1,
+          2,
+          null,
           null,
           1,
           1,
-          null,
-          null,
           1,
           0,
-          0,
-          0,
-          null,
-          null,
           null,
           null,
           null
@@ -225,13 +219,19 @@
           1,
           null,
           1,
-          null,
           1,
           1,
           1,
           null,
           null,
           null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null,
@@ -307,6 +307,6 @@
         ]
       }
     },
-    "timestamp": 1628072705
+    "timestamp": 1628073283
   }
 }
