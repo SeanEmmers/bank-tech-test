@@ -20,7 +20,7 @@ class ATM
     raise 'You cannot withdraw more than your total balance' if (balance.balance - sum).negative?
 
     balance.reduce_balance(sum)
-    @transaction_history.add_transaction(sum, :withdrawal, balance.balance)
+    @transaction_history.add_transaction(sum, :credit, balance.balance)
   end
 
   def print_statement
