@@ -4,8 +4,6 @@
 require_relative 'transaction'
 
 class TransactionHistory
-
-  attr_reader :transactions
   
   def initialize(transaction = Transaction)
     @transactions = []
@@ -16,7 +14,6 @@ class TransactionHistory
     transactions << @transaction.new(sum, action, balance)
   end
 
-  private
+  attr_accessor :transactions, :transaction
 
-  attr_writer :transactions, :transaction
 end
