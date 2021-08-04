@@ -8,9 +8,9 @@ describe ATM do
 
   let(:atm) { described_class.new }
 
-  before(:each) {
+  before(:each) do
     atm.deposit(500)
-  }
+  end
   describe '.deposit' do
     it 'adds the amount deposited to the total bank balance' do
       expect(atm.show_balance).to eq 500
@@ -29,7 +29,6 @@ describe ATM do
   end
 
   describe '.print_statement' do
-    
   end
 
   describe '.show_balance' do

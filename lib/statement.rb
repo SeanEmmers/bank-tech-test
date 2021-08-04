@@ -2,17 +2,14 @@
 
 # statement class
 class Statement
-
   def title
     "date || credit || debit || balance \n"
   end
 
   def print_statement(transactions)
     puts title
-     transactions.each { |transaction|
+    transactions.each do |transaction|
       puts " #{transaction.time} || #{transaction.credit?} || #{transaction.debit?} ||  #{transaction.balance} \n"
-     }
+    end
   end
-
-
 end

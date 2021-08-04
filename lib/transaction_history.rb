@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
-# transaction history class
+# transaction_history class
 require_relative 'transaction'
 
 class TransactionHistory
-  
   def initialize(transaction = Transaction)
     @transactions = []
     @transaction = transaction
@@ -15,5 +14,4 @@ class TransactionHistory
   end
 
   attr_accessor :transactions, :transaction
-
 end
