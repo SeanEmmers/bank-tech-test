@@ -5,10 +5,10 @@ require 'transaction'
 describe Transaction do
   let(:sum) { 50 }
   let(:action) { :deposit }
-  let(:withdrawl_action) { :withdrawl }
+  let(:credit_action) { :credit }
   let(:balance) { 50 }
   subject(:transaction) { described_class.new(sum, action, balance) }
-  subject(:withdrawl_transaction) { described_class.new(sum, withdrawl_action, balance) }
+  subject(:credit_transaction) { described_class.new(sum, credit_action, balance) }
   let(:time) { Time.now.strftime('%d/%m/%Y') }
 
   it 'creates a transaction' do
@@ -24,7 +24,7 @@ describe Transaction do
       expect(transaction.debit?).to eq sum
     end
     it 'returns an empty string if false' do
-      expect(withdrawl_transaction.debit?).to eq ''
+      expect(credit_transaction.debit?).to eq ''
     end
   end
 
@@ -33,7 +33,7 @@ describe Transaction do
       expect(transaction.credit?).to eq ''
     end
     it 'returns an empty string if false' do
-      expect(withdrawl_transaction.credit?).to eq sum
+      expect(credit_transaction.credit?).to eq sum
     end
   end
 end
