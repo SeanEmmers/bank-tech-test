@@ -13,6 +13,8 @@ class Statement
     end
   end
 
+  private
+
   def display_time(time)
     time.strftime('%d:%m:%Y')
   end
