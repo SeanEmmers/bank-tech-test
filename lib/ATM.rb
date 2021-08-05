@@ -12,13 +12,14 @@ class ATM
   end
 
   def deposit(sum)
+    verify_input(sum)
     balance.increase_balance(sum)
     @transaction_history.add_transaction(sum, :deposit, balance.balance)
   end
 
   def withdraw(sum)
-    raise 'You cannot withdraw more than your total balance' if (balance.balance - sum).negative?
-
+    verify_input(sum)
+    verify_funds(sum)
     balance.reduce_balance(sum)
     @transaction_history.add_transaction(sum, :credit, balance.balance)
   end
@@ -34,4 +35,13 @@ class ATM
   private
 
   attr_accessor :balance, :statement, :transaction_history
+
+  def verify_input(amount)
+    raise 'Please enter a valid amount' if amount.negative? || amount * 100 % 1 != 0
+  end
+
+  def verify_funds(amount)
+    raise 'You cannot withdraw more than your total balance' if (balance.balance - amount).negative?
+  end
+
 end
