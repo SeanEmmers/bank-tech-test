@@ -28,16 +28,14 @@ atm.print_statement
 Here is how the output looks in the console
 
 ```
-    date    || credit || debit || balance
- 04/08/2021 ||   200  ||       ||   1400 
- 04/08/2021 ||        ||  500  ||   1600 
- 04/08/2021 ||   200  ||       ||   1100 
- 04/08/2021 ||   200  ||       ||   1300 
- 04/08/2021 ||        ||  500  ||   1500 
- 04/08/2021 ||        ||  500  ||   1000 
- 04/08/2021 ||        ||  500  ||   500 
+    date    || credit || debit  || balance
+ 05:08:2021 || 750.00 ||        || 420.00 
+ 05:08:2021 ||        || 70.00  || 1170.00 
+ 05:08:2021 || 500.00 ||        || 1100.00 
+ 05:08:2021 ||        || 800.00 || 1600.00 
+ 05:08:2021 ||        || 800.00 || 800.00 
  
- ```
+```
 ## Edge Cases
 
 withdraw more than the balance? - This has been acounted for with a raise statement.
