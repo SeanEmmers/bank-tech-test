@@ -5,17 +5,17 @@ class Transaction
   attr_reader :time, :amount, :action, :balance
 
   def initialize(sum, action, balance)
-    @time = Time.now.strftime('%d/%m/%Y')
+    @time = Time.now
     @amount = sum
     @action = action
     @balance = balance
   end
 
   def credit?
-    @action == :credit ? @amount : '   '
+    @action == :credit
   end
 
   def debit?
-    action == :deposit ? @amount : '   '
+    action == :deposit
   end
 end
