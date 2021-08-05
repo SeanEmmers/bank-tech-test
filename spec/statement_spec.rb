@@ -5,7 +5,7 @@ require 'statement'
 describe Statement do
   describe '.title' do
     it 'prints the title' do
-      expect(subject.title).to eq "    date    || credit || debit || balance"
+      expect(subject.title).to eq "    date    || credit || debit  || balance"
     end
   end
 
